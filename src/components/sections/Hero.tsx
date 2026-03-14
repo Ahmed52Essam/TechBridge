@@ -118,28 +118,8 @@ export const Hero = () => {
                                 {/* Laptop Screen - Glass Card */}
                                 <div className="w-[320px] md:w-[400px] lg:w-[480px] aspect-[16/10] bg-white/60 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-white/80">
                                     {/* Screen Content */}
-                                    <div className="w-full h-full bg-gradient-to-br from-violet-50/50 via-white to-blue-50/50 rounded-lg flex items-center justify-center relative overflow-hidden">
-                                        {/* Subtle screen gradient overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent pointer-events-none" />
-
-                                        {/* TechBridge Branding */}
-                                        <div className="text-center relative z-10">
-                                            <motion.div
-                                                className="w-24 h-auto mx-auto mb-4 flex items-center justify-center"
-                                                animate={{
-                                                    scale: [1, 1.05, 1],
-                                                }}
-                                                transition={{
-                                                    duration: 3,
-                                                    repeat: Infinity,
-                                                    ease: "easeInOut"
-                                                }}
-                                            >
-                                                <img src={TechBridgeLogo} alt="TechBridge" className="w-full h-auto rounded-lg shadow-md" />
-                                            </motion.div>
-                                            <p className="text-sm font-bold text-slate-700 font-display">TechBridge Device</p>
-                                            <p className="text-xs text-slate-400 font-medium">Ready to Deploy</p>
-                                        </div>
+                                    <div className="w-full h-full bg-white rounded-lg flex items-center justify-center relative overflow-hidden">
+                                        <img src={TechBridgeLogo} alt="TechBridge" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
 
