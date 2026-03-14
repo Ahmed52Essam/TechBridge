@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronRight, Play, Sparkles, Rocket } from 'lucide-react';
+import { ChevronRight, Play, Sparkles } from 'lucide-react';
 import AppleLogo from '/apple-logo.png';
 import DellLogo from '/dell-logo.png';
 import HpLogo from '/hp-logo.png';
@@ -129,10 +129,10 @@ export const Hero = () => {
 
                             {/* Floating Card 1: "0 EGP Upfront" - Top Left */}
                             <motion.div
-                                className="absolute top-[20%] left-[-10%] z-10"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.8, delay: 1.2 }}
+                                className="absolute bottom-[15%] -left-[8%] z-10"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 1 }}
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
                                 <motion.div
@@ -144,35 +144,12 @@ export const Hero = () => {
                                 </motion.div>
                             </motion.div>
 
-                            {/* Floating Card 2: "Same-day Delivery" - Top Right */}
+                            {/* Floating Card 3: "Grade A Hardware" - Top Right */}
                             <motion.div
-                                className="absolute top-[10%] right-[-5%] z-10"
+                                className="absolute top-[10%] right-[-10%] z-10"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.8 }}
-                                whileHover={{ scale: 1.05, y: -5 }}
-                            >
-                                <motion.div
-                                    className="px-6 py-4 bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl border border-white/60 flex items-center gap-3"
-                                    animate={{ y: [0, -10, 0] }}
-                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                >
-                                    <div className="p-2 bg-gradient-to-br from-violet-100 to-purple-100 rounded-lg">
-                                        <Rocket className="w-5 h-5 text-violet-600" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-slate-500 font-medium">Delivery</p>
-                                        <p className="text-sm font-bold text-slate-900">Same-day</p>
-                                    </div>
-                                </motion.div>
-                            </motion.div>
-
-                            {/* Floating Card 3: "Grade A Hardware" - Bottom Left */}
-                            <motion.div
-                                className="absolute bottom-[15%] left-[0%] z-10"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 1 }}
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
                                 <motion.div
