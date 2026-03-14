@@ -24,7 +24,7 @@ export const TrustSection = () => {
                         </div>
 
                         <p className="text-slate-400 text-lg leading-relaxed max-w-md">
-                            We operate a decentralized fleet of technicians across Greater Cairo. This allows us to guarantee 4-hour replacement times for our premium subscribers.
+                            We operate a decentralized TechBridge of technicians across Greater Cairo. This allows us to guarantee 4-hour replacement times for our premium subscribers.
                         </p>
 
                         <div className="flex gap-8 border-t border-slate-800 pt-8">

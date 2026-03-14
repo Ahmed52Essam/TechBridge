@@ -8,7 +8,7 @@ export const Catalog = () => {
         element?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const fleetOptions = [
+    const BridgeOptions = [
         {
             title: 'Enterprise Laptops',
             icon: Laptop,
@@ -73,7 +73,7 @@ export const Catalog = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
-                            Our Hardware <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Fleet</span>
+                            Our Hardware <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Bridge</span>
                         </h2>
                         <p className="text-lg text-slate-600 italic">
                             Premium devices tailored to your workflow. Contact us for a custom quote.
@@ -83,7 +83,7 @@ export const Catalog = () => {
 
                 {/* 3-Column Grid */}
                 <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto items-stretch">
-                    {fleetOptions.map((option, index) => (
+                    {BridgeOptions.map((option, index) => (
                         <motion.div
                             key={index}
                             className={cn(

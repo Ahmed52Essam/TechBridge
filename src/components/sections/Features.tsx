@@ -102,7 +102,7 @@ export const Features = () => {
                                                         </div>
                                                     </div>
 
-                                                    {/* Bar 2: TechFleet Way - Subscription */}
+                                                    {/* Bar 2: TechBridge Way - Subscription */}
                                                     <div className="flex-1 max-w-[120px] h-full flex flex-col justify-end items-center relative">
                                                         {/* Floating Badge - Zero Upfront */}
                                                         <motion.div
@@ -222,7 +222,7 @@ export const Features = () => {
                                         <div className="w-6 h-6 rounded-full bg-cyan-300 border-2 border-white" />
                                         <div className="w-6 h-6 rounded-full bg-cyan-400 border-2 border-white" />
                                     </div>
-                                    <span className="font-medium">Express Fleet Active</span>
+                                    <span className="font-medium">Express Bridge Active</span>
                                 </div>
                             </div>
                         </FeatureCard>
