@@ -3,6 +3,7 @@ import { Button } from '../ui/Button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from '/TechBridgelogo.jpeg';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-                        <img src="/TechBridgelogo.jpeg" alt="TechBridge Logo" className="h-8 w-auto rounded-sm" />
+                        <img src={Logo} alt="TechBridge Logo" className="h-8 w-auto rounded-sm" />
                         <span className="text-2xl font-display font-bold text-slate-900 tracking-tight">TechBridge</span>
                     </div>
 

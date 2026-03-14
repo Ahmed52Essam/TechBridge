@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import { ChevronRight, Play, Sparkles, Rocket } from 'lucide-react';
+import AppleLogo from '/apple-logo.png';
+import DellLogo from '/dell-logo.png';
+import HpLogo from '/hp-logo.png';
+import LenovoLogo from '/lenovo-logo.png';
 
 export const Hero = () => {
     const scrollToPricing = () => {
@@ -218,16 +222,16 @@ export const Hero = () => {
                     <p className="text-center text-xs font-medium text-slate-400 mb-8 uppercase tracking-widest">Hardware Options</p>
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-40 grayscale hover:opacity-60 hover:grayscale-0 transition-all duration-500">
                         {/* Dell Logo */}
-                        <img src="/dell-logo.png" alt="Dell" className="h-8 md:h-10 w-auto object-contain" />
+                        <img src={DellLogo} alt="Dell" className="h-8 md:h-10 w-auto object-contain" />
 
                         {/* HP Logo */}
-                        <img src="/hp-logo.png" alt="HP" className="h-8 md:h-10 w-auto object-contain" />
+                        <img src={HpLogo} alt="HP" className="h-8 md:h-10 w-auto object-contain" />
 
                         {/* Lenovo Logo */}
-                        <img src="/lenovo-logo.png" alt="Lenovo" className="h-8 md:h-10 w-auto object-contain" />
+                        <img src={LenovoLogo} alt="Lenovo" className="h-8 md:h-10 w-auto object-contain" />
 
                         {/* Apple Logo */}
-                        <img src="/apple-logo.png" alt="Apple" className="h-8 md:h-10 w-auto object-contain" />
+                        <img src={AppleLogo} alt="Apple" className="h-8 md:h-10 w-auto object-contain" />
 
                         {/* Microsoft Logo */}
                         <svg className="h-8 md:h-10 w-auto" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
