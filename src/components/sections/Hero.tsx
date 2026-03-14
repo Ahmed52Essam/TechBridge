@@ -4,6 +4,7 @@ import AppleLogo from '/apple-logo.png';
 import DellLogo from '/dell-logo.png';
 import HpLogo from '/hp-logo.png';
 import LenovoLogo from '/lenovo-logo.png';
+import TechBridgeLogo from '/TechBridgelogo.png';
 
 export const Hero = () => {
     const scrollToPricing = () => {
@@ -124,7 +125,7 @@ export const Hero = () => {
                                         {/* TechBridge Branding */}
                                         <div className="text-center relative z-10">
                                             <motion.div
-                                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-violet-600 to-purple-600 flex items-center justify-center shadow-lg"
+                                                className="w-24 h-auto mx-auto mb-4 flex items-center justify-center"
                                                 animate={{
                                                     scale: [1, 1.05, 1],
                                                 }}
@@ -134,7 +135,7 @@ export const Hero = () => {
                                                     ease: "easeInOut"
                                                 }}
                                             >
-                                                <span className="text-3xl font-bold text-white font-display">T</span>
+                                                <img src={TechBridgeLogo} alt="TechBridge" className="w-full h-auto rounded-lg shadow-md" />
                                             </motion.div>
                                             <p className="text-sm font-bold text-slate-700 font-display">TechBridge Device</p>
                                             <p className="text-xs text-slate-400 font-medium">Ready to Deploy</p>
