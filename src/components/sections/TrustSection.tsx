@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export const TrustSection = () => {
     return (
         <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+            {/* Removed heavy grainy backdrop filter here to fix mobile lag */}
 
             <div className="container px-4 md:px-6 mx-auto relative z-10">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
