@@ -37,11 +37,11 @@ export const Contact = () => {
                                 <input type="hidden" name="_autoresponse" value="Thank you for your inquiry! We have received your request for a custom hardware proposal and our team will get back to you shortly." />
                                 <input type="hidden" name="_subject" value="New Hardware Proposal Request" />
                                 <input type="hidden" name="_template" value="table" />
-                                
+
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Name</label>
-                                        <Input id="name" name="name" placeholder="John Doe" className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 focus-visible:ring-secondary" required />
+                                        <Input id="name" name="name" placeholder="Ibrahim Ashraf" className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 focus-visible:ring-secondary" required />
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="company" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Company</label>
@@ -52,7 +52,7 @@ export const Contact = () => {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
-                                        <Input id="email" name="email" type="email" placeholder="john@company.com" className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 focus-visible:ring-secondary" required />
+                                        <Input id="email" name="email" type="email" placeholder="IbrahimCEO@company.com" className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 focus-visible:ring-secondary" required />
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Phone</label>
