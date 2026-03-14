@@ -3,7 +3,7 @@ import { Button } from '../ui/Button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '/TechBridgelogo.jpeg';
+import Logo from '/TechBridgelogo.png';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
