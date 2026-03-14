@@ -6,7 +6,7 @@ export const Comparison = () => {
             <div className="container px-4 mx-auto md:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl mb-4">
-                        Buying vs. TechFleet
+                        Buying vs. TechBridge
                     </h2>
                     <p className="text-slate-600 max-w-2xl mx-auto">
                         See why modern businesses are switching from CAPEX to OPEX models.
@@ -17,7 +17,7 @@ export const Comparison = () => {
                     <div className="grid grid-cols-3 bg-slate-50 p-4 font-semibold text-slate-900 border-b border-slate-200">
                         <div className="col-span-1">Comparison</div>
                         <div className="col-span-1 text-center text-red-600">Traditional Buying</div>
-                        <div className="col-span-1 text-center text-secondary">TechFleet Model</div>
+                        <div className="col-span-1 text-center text-secondary">TechBridge Model</div>
                     </div>
 
                     <div className="divide-y divide-slate-100 bg-white">

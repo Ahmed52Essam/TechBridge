@@ -42,7 +42,8 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-                        <span className="text-2xl font-display font-bold text-slate-900 tracking-tight">TechFleet</span>
+                        <img src="/TechBridgelogo.jpeg" alt="TechBridge Logo" className="h-8 w-auto rounded-sm" />
+                        <span className="text-2xl font-display font-bold text-slate-900 tracking-tight">TechBridge</span>
                     </div>
 
                     {/* Desktop Nav */}

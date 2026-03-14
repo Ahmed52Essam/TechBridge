@@ -7,7 +7,7 @@ export const WhatsAppButton = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const whatsappMessage = encodeURIComponent(
-        "Hi! I'm interested in reducing my company's hardware costs with TechFleet. Can you help me switch from CapEx to OpEx?"
+        "Hi! I'm interested in reducing my company's hardware costs with TechBridge. Can you help me switch from CapEx to OpEx?"
     );
 
     return (

@@ -117,7 +117,7 @@ export const Hero = () => {
                                         {/* Subtle screen gradient overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent pointer-events-none" />
 
-                                        {/* TechFleet Branding */}
+                                        {/* TechBridge Branding */}
                                         <div className="text-center relative z-10">
                                             <motion.div
                                                 className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-violet-600 to-purple-600 flex items-center justify-center shadow-lg"
@@ -132,7 +132,7 @@ export const Hero = () => {
                                             >
                                                 <span className="text-3xl font-bold text-white font-display">T</span>
                                             </motion.div>
-                                            <p className="text-sm font-bold text-slate-700 font-display">TechFleet Device</p>
+                                            <p className="text-sm font-bold text-slate-700 font-display">TechBridge Device</p>
                                             <p className="text-xs text-slate-400 font-medium">Ready to Deploy</p>
                                         </div>
                                     </div>

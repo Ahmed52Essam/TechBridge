@@ -25,7 +25,7 @@ export const Features = () => {
         <section id="features" className="py-24 bg-slate-50/50">
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <span className="text-secondary font-semibold tracking-wider uppercase text-sm">Why TechFleet?</span>
+                    <span className="text-secondary font-semibold tracking-wider uppercase text-sm">Why TechBridge?</span>
                     <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mt-2">
                         Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Modern Teams</span>
                     </h2>
@@ -127,7 +127,7 @@ export const Features = () => {
 
                                                         {/* Label */}
                                                         <div className="text-center mt-3 absolute -bottom-12 left-1/2 -translate-x-1/2 w-full">
-                                                            <p className="text-xs font-bold text-primary">TechFleet</p>
+                                                            <p className="text-xs font-bold text-primary">TechBridge</p>
                                                             <p className="text-[10px] text-primary/70">Subscription</p>
                                                         </div>
                                                     </div>

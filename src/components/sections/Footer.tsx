@@ -6,7 +6,7 @@ export const Footer = () => {
             <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                        <h3 className="text-xl font-bold text-white mb-2">TechFleet</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">TechBridge</h3>
                         <p className="text-sm">Proudly serving the Egyptian Business Community.</p>
                     </div>
 
@@ -25,7 +25,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 text-center text-xs text-slate-600">
-                    &copy; {new Date().getFullYear()} TechFleet Egypt. All rights reserved.
+                    &copy; {new Date().getFullYear()} TechBridge Egypt. All rights reserved.
                 </div>
             </div>
         </footer>
