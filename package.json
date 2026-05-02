@@ -1,9 +1,9 @@
 {
-  "name": "techfleet",
+  "name": "techbridge",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ahmed52Essam.github.io/TechBridge",
+  "homepage": "https://www.techbridge-eg.com/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

@@ -1,10 +1,10 @@
-# TechFleet - Hardware as a Service
+# TechBridge - Hardware as a Service
 
 Modern hardware subscription platform built with React, TypeScript, and Vite.
 
-## 🚀 About TechFleet
+## 🚀 About TechBridge
 
-TechFleet provides businesses with enterprise-grade laptops and workstations through a flexible subscription model. Switch from CapEx to OpEx and keep your capital for growth.
+TechBridge provides businesses with enterprise-grade laptops and workstations through a flexible subscription model. Switch from CapEx to OpEx and keep your capital for growth.
 
 ## 🛠️ Tech Stack
 
@@ -37,7 +37,7 @@ npm run lint
 ## 🏗️ Project Structure
 
 ```
-TechFleet/
+TechBridge/
 ├── src/
 │   ├── components/
 │   │   ├── sections/      # Page sections (Hero, Features, etc.)
