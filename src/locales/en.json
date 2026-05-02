@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "benefits": "Benefits",
+    "hardware": "Hardware",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Hardware as a Service",
+    "titleMain": "Stop Buying Hardware.",
+    "titleSub": "Start Subscribing to Productivity.",
+    "description": "Equip your company with the latest laptops and workstations for a fixed monthly fee. No upfront capital. 4-hour replacement guarantee in Cairo.",
+    "viewPricing": "View Pricing",
+    "howItWorks": "See How It Works",
+    "floatingCard1": "0 EGP Upfront",
+    "floatingCard2": "Grade A Hardware",
+    "floatingCard2Label": "Quality",
+    "brandLabel": "Hardware Options"
+  },
+  "comparison": {
+    "title": "Buying vs. TechBridge",
+    "subtitle": "See why modern businesses are switching from CAPEX to OPEX models.",
+    "headerLabel": "Comparison",
+    "headerBuy": "Traditional Buying",
+    "headerRent": "TechBridge Model",
+    "rows": {
+      "upfront": {
+        "label": "Upfront Capital",
+        "buy": "High Cost",
+        "rent": "Zero"
+      },
+      "tax": {
+        "label": "Tax Deductible",
+        "buy": "Depreciating Asset",
+        "rent": "100% (OpEx)"
+      },
+      "repairs": {
+        "label": "Repairs & Maintenance",
+        "buy": "Slow & Costly",
+        "rent": "Instant Swaps (24hr)"
+      },
+      "upgrades": {
+        "label": "Hardware Upgrades",
+        "buy": "Every 3-5 Years",
+        "rent": "Every 24 Months"
+      },
+      "scalability": {
+        "label": "Scalability",
+        "buy": "Stuck with Inventory",
+        "rent": "Scale Up/Down Anytime"
+      }
+    }
+  },
+  "features": {
+    "badge": "Why TechBridge?",
+    "title": "Built for Modern Teams",
+    "modernTeams": "Modern Teams",
+    "zeroUpfront": {
+      "title": "Zero Upfront Capital",
+      "description": "Stop draining your cash flow on depreciating assets. Switch to OpEx and keep your capital for growth, marketing, and hiring."
+    },
+    "simulation": {
+      "title": "First Year Cash Flow",
+      "subtitle": "10 Enterprise Laptops",
+      "buyLabel": "Buying",
+      "buySub": "10 Workstations",
+      "rentLabel": "TechBridge",
+      "rentSub": "Subscription",
+      "negativeImpact": "-500k EGP",
+      "zeroUpfront": "0 EGP ✨",
+      "caption": "Simulation based on market average for 10 Enterprise Laptops."
+    },
+    "tax": {
+      "title": "100% Tax Deductible",
+      "description": "Leasing utilizes OpEx instead of CapEx, making every invoice 100% tax deductible."
+    },
+    "protection": {
+      "title": "Complete Protection",
+      "description": "Accidental damage protection included. You break it, we fix it or replace it.",
+      "theft": "Theft",
+      "liquid": "Liquid"
+    },
+    "delivery": {
+      "title": "Same-Day Delivery",
+      "description": "Order before noon, get your devices delivered the same day across Greater Cairo.",
+      "status": "Express Bridge Active"
+    },
+    "upgrades": {
+      "title": "Instant Upgrades",
+      "description": "Need more power? Upgrade to the latest models anytime without buying new hardware.",
+      "label": "Upgrade Availability",
+      "availability": "24/7"
+    }
+  },
+  "catalog": {
+    "title": "Our Hardware",
+    "highlightedWord": "Bridge",
+    "subtitle": "Premium devices tailored to your workflow. Contact us for a custom quote.",
+    "popular": "MOST POPULAR",
+    "differentConfig": "Need a different configuration?",
+    "talkToTeam": "Talk to our team",
+    "items": {
+      "laptops": {
+        "title": "Enterprise Laptops",
+        "description": "High-performance units for mobile professionals and management.",
+        "specs": [
+          "Intel Core i5/i7",
+          "Lightweight Chassis",
+          "Long Battery Life"
+        ],
+        "buttonText": "Request Quote"
+      },
+      "pcs": {
+        "title": "Custom PC Builds",
+        "description": "Tailored desktop configurations for admin, operations, or specific office needs.",
+        "specs": [
+          "Fully Customizable",
+          "Upgradable Storage",
+          "Cost Effective"
+        ],
+        "buttonText": "Build Your Config"
+      },
+      "workstations": {
+        "title": "High-Power Workstations",
+        "description": "Extreme performance for rendering, development, and graphic design.",
+        "specs": [
+          "Xeon or i9 Processors",
+          "RTX Graphics",
+          "32GB+ RAM"
+        ],
+        "buttonText": "Contact Sales"
+      }
+    }
+  },
+  "trust": {
+    "badge": "Active Zones",
+    "title": "Cairo’s Fastest Tech Implementation.",
+    "techImplementation": "Tech Implementation.",
+    "description": "We operate a decentralized TechBridge of technicians across Greater Cairo. This allows us to guarantee 4-hour replacement times for our premium subscribers.",
+    "stats": {
+      "startups": "Active Startups",
+      "response": "Avg. Response",
+      "uptime": "Uptime"
+    },
+    "locations": {
+      "newCairo": "New Cairo",
+      "maadi": "Maadi",
+      "zayed": "Sheikh Zayed",
+      "october": "6th October",
+      "downtown": "Downtown"
+    }
+  },
+  "contact": {
+    "title": "Upgrade Your Office Today.",
+    "subtitle": "Get a custom proposal within 24 hours. No commitment required. Let us handle the hardware so you can focus on growth.",
+    "cardTitle": "Request Proposal",
+    "cardDescription": "Tell us what you need. We'll build a plan for you.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ibrahim Ashraf",
+      "company": "Company",
+      "companyPlaceholder": "Acme Inc.",
+      "email": "Email",
+      "emailPlaceholder": "IbrahimCEO@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+20 1xx xxx xxxx",
+      "devicesLabel": "How many devices do you need?",
+      "devicesOptions": {
+        "1-5": "1-5 Devices",
+        "5-20": "5-20 Devices",
+        "20+": "20+ Devices"
+      },
+      "submit": "Request Proposal",
+      "autoResponse": "Thank you for your inquiry! We have received your request for a custom hardware proposal and our team will get back to you shortly."
+    }
+  },
+  "footer": {
+    "tagline": "Proudly serving the Egyptian Business Community.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "copyright": "TechBridge Egypt. All rights reserved."
+  },
+  "whatsapp": {
+    "button": "Chat with an Expert",
+    "message": "Hi! I'm interested in reducing my company's hardware costs with TechBridge. Can you help me switch from CapEx to OpEx?"
+  },
+  "seo": {
+    "title": "TechBridge - Hardware as a Service"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: May 2026",
+    "introduction": "Welcome to TechBridge. By using our website and services, you agree to comply with and be bound by the following terms and conditions.",
+    "sections": [
+      {
+        "title": "1. Subscription Model",
+        "content": "TechBridge provides Hardware as a Service (HaaS). Our products are provided on a subscription basis and remain the property of TechBridge unless otherwise stated in a separate purchase agreement."
+      },
+      {
+        "title": "2. Hardware Responsibility",
+        "content": "Subscribers are responsible for the basic care of the hardware. While we provide a 4-hour replacement guarantee for technical failures, intentional damage or gross negligence may result in repair fees."
+      },
+      {
+        "title": "3. Payment & Billing",
+        "content": "Subscription fees are billed monthly in advance. Failure to pay within the grace period may result in service suspension and hardware retrieval."
+      },
+      {
+        "title": "4. Service Guarantee",
+        "content": "Our 4-hour replacement guarantee applies to Greater Cairo during business hours (9 AM - 6 PM, Sunday to Thursday). Outside these hours, replacements will be prioritized for the next business day."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: May 2026",
+    "introduction": "At TechBridge, we take your privacy seriously. This policy explains how we collect, use, and protect your business information.",
+    "sections": [
+      {
+        "title": "1. Information Collection",
+        "content": "We collect information you provide via our contact forms, including name, company name, email, and phone number, to provide custom hardware proposals."
+      },
+      {
+        "title": "2. Data Usage",
+        "content": "Your data is used solely to manage your inquiries, provide technical support, and improve our subscription services. We do not sell your data to third parties."
+      },
+      {
+        "title": "3. Data Security",
+        "content": "We implement industry-standard security measures to protect your information from unauthorized access or disclosure."
+      },
+      {
+        "title": "4. Cookies",
+        "content": "Our website uses cookies to enhance your browsing experience and analyze site traffic."
+      }
+    ]
+  }
+}

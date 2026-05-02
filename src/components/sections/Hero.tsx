@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { ChevronRight, Play, Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { cn } from '../../lib/utils';
 import AppleLogo from '/apple-logo.png';
 import DellLogo from '/dell-logo.png';
 import HpLogo from '/hp-logo.png';
@@ -7,6 +9,7 @@ import LenovoLogo from '/lenovo-logo.png';
 import TechBridgeLogo from '/TechBridgelogo.png';
 
 export const Hero = () => {
+    const { t, i18n } = useTranslation();
     const scrollToPricing = () => {
         const element = document.getElementById('catalog');
         element?.scrollIntoView({ behavior: 'smooth' });
@@ -29,7 +32,7 @@ export const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                     {/* Left Column: Text Content */}
-                    <div className="flex flex-col items-start text-left space-y-8">
+                    <div className="flex flex-col items-start text-start space-y-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -39,15 +42,15 @@ export const Hero = () => {
                             {/* Pill Badge */}
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 backdrop-blur-md border border-white/60 shadow-sm">
                                 <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
-                                <span className="text-sm font-semibold text-slate-700">Hardware as a Service</span>
+                                <span className="text-sm font-semibold text-slate-700">{t('hero.badge')}</span>
                             </div>
 
                             {/* Massive Headline with Gradient */}
                             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-display font-bold tracking-tight leading-[0.95]">
-                                <span className="text-slate-900">Stop Buying<br />Hardware.</span>
+                                <span className="text-slate-900">{t('hero.titleMain')}</span>
                                 <br />
                                 <span className="bg-gradient-to-b from-violet-600 via-purple-500 to-blue-600 bg-clip-text text-transparent">
-                                    Start Subscribing to Productivity.
+                                    {t('hero.titleSub')}
                                 </span>
                             </h1>
                         </motion.div>
@@ -59,7 +62,7 @@ export const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            Equip your company with the latest laptops and workstations for a fixed monthly fee. No upfront capital. 4-hour replacement guarantee in Cairo.
+                            {t('hero.description')}
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -74,8 +77,8 @@ export const Hero = () => {
                                 onClick={scrollToPricing}
                                 className="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-full shadow-lg shadow-violet-500/50 hover:shadow-xl hover:shadow-violet-500/60 transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2"
                             >
-                                <span>View Pricing</span>
-                                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                <span>{t('hero.viewPricing')}</span>
+                                <ChevronRight className={cn("w-5 h-5 transition-transform", i18n.language === 'ar' ? "group-hover:-translate-x-1 rotate-180" : "group-hover:translate-x-1")} />
                             </button>
 
                             {/* Secondary Button - White Pill */}
@@ -84,7 +87,7 @@ export const Hero = () => {
                                 className="px-8 py-4 bg-white text-slate-700 font-semibold rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
                             >
                                 <Play className="w-4 h-4 fill-current" />
-                                <span>See How It Works</span>
+                                <span>{t('hero.howItWorks')}</span>
                             </button>
                         </motion.div>
 
@@ -129,7 +132,7 @@ export const Hero = () => {
 
                             {/* Floating Card 1: "0 EGP Upfront" - Top Left */}
                             <motion.div
-                                className="absolute bottom-[15%] -left-[8%] z-10"
+                                className={cn("absolute bottom-[15%] z-10", i18n.language === 'ar' ? "-right-[8%]" : "-left-[8%]")}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 1 }}
@@ -140,13 +143,13 @@ export const Hero = () => {
                                     animate={{ rotate: [0, 5, 0] }}
                                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                                 >
-                                    ✨ 0 EGP Upfront
+                                    {t('hero.floatingCard1')}
                                 </motion.div>
                             </motion.div>
 
                             {/* Floating Card 3: "Grade A Hardware" - Top Right */}
                             <motion.div
-                                className="absolute top-[10%] right-[-10%] z-10"
+                                className={cn("absolute top-[10%] z-10", i18n.language === 'ar' ? "left-[-10%]" : "right-[-10%]")}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -160,9 +163,9 @@ export const Hero = () => {
                                     <div className="p-2 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg">
                                         <Sparkles className="w-5 h-5 text-blue-600" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-slate-500 font-medium">Quality</p>
-                                        <p className="text-sm font-bold text-slate-900">Grade A Hardware</p>
+                                    <div className="text-start">
+                                        <p className="text-xs text-slate-500 font-medium">{t('hero.floatingCard2Label')}</p>
+                                        <p className="text-sm font-bold text-slate-900">{t('hero.floatingCard2')}</p>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -177,7 +180,7 @@ export const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}
                 >
-                    <p className="text-center text-xs font-medium text-slate-400 mb-8 uppercase tracking-widest">Hardware Options</p>
+                    <p className="text-center text-xs font-medium text-slate-400 mb-8 uppercase tracking-widest">{t('hero.brandLabel')}</p>
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-40 grayscale hover:opacity-60 hover:grayscale-0 transition-all duration-500">
                         {/* Dell Logo */}
                         <img src={DellLogo} alt="Dell" className="h-8 md:h-10 w-auto object-contain" />

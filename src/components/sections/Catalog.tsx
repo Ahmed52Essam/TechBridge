@@ -1,8 +1,11 @@
 import { cn } from '../../lib/utils';
 import { motion } from 'framer-motion';
 import { Laptop, Monitor, Cpu, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Catalog = () => {
+    const { t, i18n } = useTranslation();
+
     const scrollToContact = () => {
         const element = document.getElementById('contact');
         element?.scrollIntoView({ behavior: 'smooth' });
@@ -10,30 +13,16 @@ export const Catalog = () => {
 
     const BridgeOptions = [
         {
-            title: 'Enterprise Laptops',
+            key: 'laptops',
             icon: Laptop,
-            description: 'High-performance units for mobile professionals and management.',
-            specs: [
-                'Intel Core i5/i7',
-                'Lightweight Chassis',
-                'Long Battery Life'
-            ],
-            buttonText: 'Request Quote',
             buttonStyle: 'outline',
             accentColor: 'from-blue-500 to-cyan-500',
             iconBg: 'from-blue-100 to-cyan-100',
             iconColor: 'text-blue-600'
         },
         {
-            title: 'Custom PC Builds',
+            key: 'pcs',
             icon: Monitor,
-            description: 'Tailored desktop configurations for admin, operations, or specific office needs.',
-            specs: [
-                'Fully Customizable',
-                'Upgradable Storage',
-                'Cost Effective'
-            ],
-            buttonText: 'Build Your Config',
             buttonStyle: 'primary',
             accentColor: 'from-violet-500 to-purple-500',
             iconBg: 'from-violet-100 to-purple-100',
@@ -41,15 +30,8 @@ export const Catalog = () => {
             featured: true
         },
         {
-            title: 'High-Power Workstations',
+            key: 'workstations',
             icon: Cpu,
-            description: 'Extreme performance for rendering, development, and graphic design.',
-            specs: [
-                'Xeon or i9 Processors',
-                'RTX Graphics',
-                '32GB+ RAM'
-            ],
-            buttonText: 'Contact Sales',
             buttonStyle: 'outline',
             accentColor: 'from-purple-500 to-pink-500',
             iconBg: 'from-purple-100 to-pink-100',
@@ -73,10 +55,13 @@ export const Catalog = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
-                            Our Hardware <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Bridge</span>
+                            {t('catalog.title')}{' '}
+                            <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
+                                {t('catalog.highlightedWord')}
+                            </span>
                         </h2>
                         <p className="text-lg text-slate-600 italic">
-                            Premium devices tailored to your workflow. Contact us for a custom quote.
+                            {t('catalog.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -99,7 +84,7 @@ export const Catalog = () => {
                             {/* Featured Badge */}
                             {option.featured && (
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-violet-600 to-purple-600 text-white text-xs font-bold rounded-full shadow-lg">
-                                    MOST POPULAR
+                                    {t('catalog.popular')}
                                 </div>
                             )}
 
@@ -114,19 +99,19 @@ export const Catalog = () => {
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                                {option.title}
+                            <h3 className="text-2xl font-bold text-slate-900 mb-3 text-start">
+                                {t(`catalog.items.${option.key}.title`)}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
-                                {option.description}
+                            <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow text-start">
+                                {t(`catalog.items.${option.key}.description`)}
                             </p>
 
                             {/* Specs */}
                             <div className="mb-8 space-y-3">
-                                {option.specs.map((spec, i) => (
-                                    <div key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                                {(t(`catalog.items.${option.key}.specs`, { returnObjects: true }) as string[]).map((spec, i) => (
+                                    <div key={i} className="flex items-start gap-2 text-sm text-slate-700 text-start">
                                         <div className="mt-1.5 w-1 h-1 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shrink-0" />
                                         <span>{spec}</span>
                                     </div>
@@ -146,8 +131,8 @@ export const Catalog = () => {
                                         : "bg-white/80 text-slate-700 border-2 border-slate-200 hover:border-violet-300 hover:bg-white hover:text-violet-600"
                                 )}
                             >
-                                <span>{option.buttonText}</span>
-                                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                                <span>{t(`catalog.items.${option.key}.buttonText`)}</span>
+                                <ArrowRight className={cn("w-4 h-4 transition-transform", i18n.language === 'ar' ? "group-hover/btn:-translate-x-1 rotate-180" : "group-hover/btn:translate-x-1")} />
                             </button>
 
                             {/* Hover Gradient Accent */}
@@ -168,7 +153,10 @@ export const Catalog = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                 >
                     <p className="text-sm text-slate-500">
-                        Need a different configuration? <button onClick={scrollToContact} className="text-violet-600 font-semibold hover:underline">Talk to our team →</button>
+                        {t('catalog.differentConfig')}{' '}
+                        <button onClick={scrollToContact} className="text-violet-600 font-semibold hover:underline">
+                            {t('catalog.talkToTeam')} {i18n.language === 'ar' ? '←' : '→'}
+                        </button>
                     </p>
                 </motion.div>
             </div>

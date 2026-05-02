@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Button } from '../ui/Button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Logo from '/TechBridgelogo.png';
 
 export const Navbar = () => {
+    const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -18,13 +23,25 @@ export const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Benefits', href: '#comparison' },
-        { name: 'Hardware', href: '#catalog' },
-        { name: 'How It Works', href: '#features' },
-        { name: 'FAQ', href: '#faq' },
+        { name: t('nav.benefits'), href: '#comparison' },
+        { name: t('nav.hardware'), href: '#catalog' },
+        { name: t('nav.howItWorks'), href: '#features' },
+        { name: t('nav.faq'), href: '#faq' },
     ];
 
     const scrollToSection = (id: string) => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.querySelector(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+            setIsMenuOpen(false);
+            return;
+        }
+        
         const element = document.querySelector(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -32,8 +49,13 @@ export const Navbar = () => {
         }
     };
 
+    const toggleLanguage = () => {
+        const newLang = i18n.language.startsWith('en') ? 'ar' : 'en';
+        i18n.changeLanguage(newLang);
+    };
+
     return (
-        <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+        <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none" dir="ltr">
             <nav className={cn(
                 "pointer-events-auto transition-all duration-300 ease-in-out border border-white/20",
                 scrolled
@@ -42,7 +64,7 @@ export const Navbar = () => {
             )}>
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
                         <img src={Logo} alt="TechBridge Logo" className="h-8 w-auto rounded-sm" />
                         <span className="text-2xl font-display font-bold text-slate-900 tracking-tight">TechBridge</span>
                     </div>
@@ -51,7 +73,7 @@ export const Navbar = () => {
                     <div className="hidden md:flex items-center gap-8 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30 shadow-sm">
                         {navLinks.map((link) => (
                             <a
-                                key={link.name}
+                                key={link.href}
                                 href={link.href}
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -65,19 +87,32 @@ export const Navbar = () => {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* CTA Button & Language Toggle */}
                     <div className="hidden md:flex items-center gap-4">
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-primary transition-colors border border-slate-200 rounded-full bg-white/50"
+                        >
+                            <Languages size={14} />
+                            {i18n.language === 'en' ? 'العربية' : 'English'}
+                        </button>
                         <Button
                             onClick={() => scrollToSection('#contact')}
                             className="relative overflow-hidden group bg-primary hover:bg-primary/90 rounded-full px-6 shadow-glow"
                         >
-                            <span className="relative z-10">Get Started</span>
+                            <span className="relative z-10">{t('nav.getStarted')}</span>
                             <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
                         </Button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-3">
+                        <button
+                            onClick={toggleLanguage}
+                            className="p-2 text-slate-700 bg-white/50 rounded-full backdrop-blur-sm shadow-sm"
+                        >
+                            <span className="text-xs font-bold">{i18n.language === 'en' ? 'AR' : 'EN'}</span>
+                        </button>
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="p-2 text-slate-700 bg-white/50 rounded-full backdrop-blur-sm shadow-sm"
@@ -99,7 +134,7 @@ export const Navbar = () => {
                             <div className="flex flex-col space-y-4">
                                 {navLinks.map((link) => (
                                     <a
-                                        key={link.name}
+                                        key={link.href}
                                         href={link.href}
                                         onClick={(e) => {
                                             e.preventDefault();
@@ -111,7 +146,7 @@ export const Navbar = () => {
                                     </a>
                                 ))}
                                 <Button className="w-full rounded-xl" onClick={() => scrollToSection('#contact')}>
-                                    Get Started
+                                    {t('nav.getStarted')}
                                 </Button>
                             </div>
                         </motion.div>
@@ -121,3 +156,4 @@ export const Navbar = () => {
         </div>
     );
 };
+

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { TrendingUp, Receipt, ShieldCheck, Truck, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { cn } from '../../lib/utils';
 
 interface FeatureCardProps {
@@ -21,13 +22,17 @@ const FeatureCard = ({ className, children }: FeatureCardProps) => (
 );
 
 export const Features = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="features" className="py-24 bg-slate-50/50">
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <span className="text-secondary font-semibold tracking-wider uppercase text-sm">Why TechBridge?</span>
+                    <span className="text-secondary font-semibold tracking-wider uppercase text-sm">{t('features.badge')}</span>
                     <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mt-2">
-                        Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Modern Teams</span>
+                        {t('features.title').split(t('features.modernTeams'))[0]}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{t('features.modernTeams')}</span>
+                        {t('features.title').split(t('features.modernTeams'))[1]}
                     </h2>
                 </div>
 
@@ -43,13 +48,13 @@ export const Features = () => {
                     >
                         <FeatureCard className="h-full bg-gradient-to-br from-indigo-50 to-white border-indigo-100">
                             <div className="flex flex-col md:flex-row items-center gap-8 h-full">
-                                <div className="flex-1 text-left space-y-4">
+                                <div className="flex-1 text-start space-y-4">
                                     <div className="p-3 bg-primary/10 w-fit rounded-xl text-primary">
                                         <TrendingUp size={32} />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-900">Zero Upfront Capital</h3>
+                                    <h3 className="text-2xl font-bold text-slate-900">{t('features.zeroUpfront.title')}</h3>
                                     <p className="text-slate-600 leading-relaxed">
-                                        Stop draining your cash flow on depreciating assets. Switch to OpEx and keep your capital for growth, marketing, and hiring.
+                                        {t('features.zeroUpfront.description')}
                                     </p>
                                 </div>
                                 <div className="flex-1 w-full flex items-center justify-center p-4">
@@ -59,8 +64,8 @@ export const Features = () => {
                                         <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
                                             {/* Chart Title */}
                                             <div className="text-center mb-8">
-                                                <h4 className="text-sm font-bold text-slate-800 mb-1">First Year Cash Flow</h4>
-                                                <p className="text-xs text-slate-500">10 Enterprise Laptops</p>
+                                                <h4 className="text-sm font-bold text-slate-800 mb-1">{t('features.simulation.title')}</h4>
+                                                <p className="text-xs text-slate-500">{t('features.simulation.subtitle')}</p>
                                             </div>
 
                                             {/* Bars Container */}
@@ -70,13 +75,13 @@ export const Features = () => {
                                                     <div className="flex-1 max-w-[120px] h-full flex flex-col justify-end items-center relative">
                                                         {/* Floating Badge - Negative Impact */}
                                                         <motion.div
-                                                            className="absolute -top-8 left-12/2 -translate-x-1/2 px-3 py-1.5 bg-red-100 border border-red-200 rounded-full shadow-md z-10 whitespace-nowrap"
+                                                            className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-red-100 border border-red-200 rounded-full shadow-md z-10 whitespace-nowrap"
                                                             initial={{ opacity: 0, y: 10 }}
                                                             whileInView={{ opacity: 1, y: 0 }}
                                                             viewport={{ once: true }}
                                                             transition={{ delay: 0.5 }}
                                                         >
-                                                            <span className="text-xs font-bold text-red-700">-500k EGP</span>
+                                                            <span className="text-xs font-bold text-red-700">{t('features.simulation.negativeImpact')}</span>
                                                         </motion.div>
 
                                                         {/* Animated Bar - Shoots Up Aggressively */}
@@ -97,8 +102,8 @@ export const Features = () => {
 
                                                         {/* Label */}
                                                         <div className="text-center mt-3 absolute -bottom-12 left-1/2 -translate-x-1/2 w-full">
-                                                            <p className="text-xs font-bold text-slate-800">Buying</p>
-                                                            <p className="text-[10px] text-slate-500">10 Workstations</p>
+                                                            <p className="text-xs font-bold text-slate-800">{t('features.simulation.buyLabel')}</p>
+                                                            <p className="text-[10px] text-slate-500">{t('features.simulation.buySub')}</p>
                                                         </div>
                                                     </div>
 
@@ -106,13 +111,13 @@ export const Features = () => {
                                                     <div className="flex-1 max-w-[120px] h-full flex flex-col justify-end items-center relative">
                                                         {/* Floating Badge - Zero Upfront */}
                                                         <motion.div
-                                                            className="absolute -top-8 left-11/2 -translate-x-1/2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full shadow-md z-10 whitespace-nowrap"
+                                                            className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full shadow-md z-10 whitespace-nowrap"
                                                             initial={{ opacity: 0, y: 10 }}
                                                             whileInView={{ opacity: 1, y: 0 }}
                                                             viewport={{ once: true }}
                                                             transition={{ delay: 0.8 }}
                                                         >
-                                                            <span className="text-xs font-bold text-primary">0 EGP ✨</span>
+                                                            <span className="text-xs font-bold text-primary">{t('features.simulation.zeroUpfront')}</span>
                                                         </motion.div>
 
                                                         {/* Animated Bar - Stays Small and Calm */}
@@ -127,8 +132,8 @@ export const Features = () => {
 
                                                         {/* Label */}
                                                         <div className="text-center mt-3 absolute -bottom-12 left-1/2 -translate-x-1/2 w-full">
-                                                            <p className="text-xs font-bold text-primary">TechBridge</p>
-                                                            <p className="text-[10px] text-primary/70">Subscription</p>
+                                                            <p className="text-xs font-bold text-primary">{t('features.simulation.rentLabel')}</p>
+                                                            <p className="text-[10px] text-primary/70">{t('features.simulation.rentSub')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,7 +142,7 @@ export const Features = () => {
                                             {/* Bottom Caption */}
                                             <div className="text-center pt-4 border-t border-slate-100">
                                                 <p className="text-[11px] text-slate-500 italic">
-                                                    Simulation based on market average for 10 Enterprise Laptops.
+                                                    {t('features.simulation.caption')}
                                                 </p>
                                             </div>
                                         </div>
@@ -156,13 +161,13 @@ export const Features = () => {
                         className="md:col-span-2"
                     >
                         <FeatureCard className="bg-white">
-                            <div className="text-left space-y-4">
+                            <div className="text-start space-y-4">
                                 <div className="p-3 bg-green-50 w-fit rounded-xl text-green-600">
                                     <Receipt size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900">100% Tax Deductible</h3>
+                                <h3 className="text-xl font-bold text-slate-900">{t('features.tax.title')}</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed">
-                                    Leasing utilizes OpEx instead of CapEx, making every invoice 100% tax deductible.
+                                    {t('features.tax.description')}
                                 </p>
                             </div>
                         </FeatureCard>
@@ -181,18 +186,18 @@ export const Features = () => {
                                 <div className="p-3 bg-blue-50 w-fit rounded-xl text-blue-600">
                                     <ShieldCheck size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900">Complete Protection</h3>
+                                <h3 className="text-xl font-bold text-slate-900">{t('features.protection.title')}</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed">
-                                    Accidental damage protection included. You break it, we fix it or replace it.
+                                    {t('features.protection.description')}
                                 </p>
                                 <div className="flex gap-2 mt-2">
                                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100">
                                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                        <span className="text-xs font-bold text-slate-700">Theft</span>
+                                        <span className="text-xs font-bold text-slate-700">{t('features.protection.theft')}</span>
                                     </div>
                                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100">
                                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                        <span className="text-xs font-bold text-slate-700">Liquid</span>
+                                        <span className="text-xs font-bold text-slate-700">{t('features.protection.liquid')}</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,13 +213,13 @@ export const Features = () => {
                         className="md:col-span-2"
                     >
                         <FeatureCard className="bg-gradient-to-br from-cyan-50 to-white border-cyan-100">
-                            <div className="text-left space-y-4">
+                            <div className="text-start space-y-4">
                                 <div className="p-3 bg-cyan-100 w-fit rounded-xl text-cyan-600">
                                     <Truck size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900">Same-Day Delivery</h3>
+                                <h3 className="text-xl font-bold text-slate-900">{t('features.delivery.title')}</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed">
-                                    Order before noon, get your devices delivered the same day across Greater Cairo.
+                                    {t('features.delivery.description')}
                                 </p>
                                 <div className="flex items-center gap-2 text-xs text-slate-500 mt-4">
                                     <div className="flex -space-x-1">
@@ -222,7 +227,7 @@ export const Features = () => {
                                         <div className="w-6 h-6 rounded-full bg-cyan-300 border-2 border-white" />
                                         <div className="w-6 h-6 rounded-full bg-cyan-400 border-2 border-white" />
                                     </div>
-                                    <span className="font-medium">Express Bridge Active</span>
+                                    <span className="font-medium">{t('features.delivery.status')}</span>
                                 </div>
                             </div>
                         </FeatureCard>
@@ -237,18 +242,18 @@ export const Features = () => {
                         className="md:col-span-2"
                     >
                         <FeatureCard className="bg-gradient-to-br from-violet-50 to-white border-violet-100">
-                            <div className="text-left space-y-4">
+                            <div className="text-start space-y-4">
                                 <div className="p-3 bg-violet-100 w-fit rounded-xl text-violet-600">
                                     <Zap size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900">Instant Upgrades</h3>
+                                <h3 className="text-xl font-bold text-slate-900">{t('features.upgrades.title')}</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed">
-                                    Need more power? Upgrade to the latest models anytime without buying new hardware.
+                                    {t('features.upgrades.description')}
                                 </p>
                                 <div className="mt-4 p-2 bg-violet-50 rounded-lg border border-violet-100">
                                     <div className="flex items-center justify-between text-xs">
-                                        <span className="text-slate-600">Upgrade Availability</span>
-                                        <span className="font-bold text-violet-600">24/7</span>
+                                        <span className="text-slate-600">{t('features.upgrades.label')}</span>
+                                        <span className="font-bold text-violet-600">{t('features.upgrades.availability')}</span>
                                     </div>
                                 </div>
                             </div>

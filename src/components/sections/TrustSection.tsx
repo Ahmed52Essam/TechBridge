@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const TrustSection = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
             {/* Removed heavy grainy backdrop filter here to fix mobile lag */}
@@ -15,30 +18,30 @@ export const TrustSection = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <div>
-                            <span className="text-secondary font-mono text-sm tracking-wider uppercase">Active Zones</span>
+                        <div className="text-start">
+                            <span className="text-secondary font-mono text-sm tracking-wider uppercase">{t('trust.badge')}</span>
                             <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">
-                                Cairo’s Fastest <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-emerald-400">Tech Implementation.</span>
+                                {t('trust.title').split(t('trust.techImplementation'))[0]} <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-emerald-400">{t('trust.techImplementation')}</span>
                             </h2>
                         </div>
 
-                        <p className="text-slate-400 text-lg leading-relaxed max-w-md">
-                            We operate a decentralized TechBridge of technicians across Greater Cairo. This allows us to guarantee 4-hour replacement times for our premium subscribers.
+                        <p className="text-slate-400 text-lg leading-relaxed max-w-md text-start">
+                            {t('trust.description')}
                         </p>
 
                         <div className="flex gap-8 border-t border-slate-800 pt-8">
                             <div>
                                 <h3 className="text-3xl font-bold text-white">45<span className="text-secondary">+</span></h3>
-                                <p className="text-slate-500 text-sm mt-1">Active Startups</p>
+                                <p className="text-slate-500 text-sm mt-1">{t('trust.stats.startups')}</p>
                             </div>
                             <div>
                                 <h3 className="text-3xl font-bold text-white">4h<span className="text-emerald-500">.</span></h3>
-                                <p className="text-slate-500 text-sm mt-1">Avg. Response</p>
+                                <p className="text-slate-500 text-sm mt-1">{t('trust.stats.response')}</p>
                             </div>
                             <div>
                                 <h3 className="text-3xl font-bold text-white">100<span className="text-secondary">%</span></h3>
-                                <p className="text-slate-500 text-sm mt-1">Uptime</p>
+                                <p className="text-slate-500 text-sm mt-1">{t('trust.stats.uptime')}</p>
                             </div>
                         </div>
                     </motion.div>
@@ -69,7 +72,7 @@ export const TrustSection = () => {
                                 <div className="w-3 h-3 bg-secondary rounded-full relative z-10 border-2 border-slate-900" />
                             </div>
                             <div className="mt-2 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                <span className="text-xs font-bold text-white">New Cairo</span>
+                                <span className="text-xs font-bold text-white">{t('trust.locations.newCairo')}</span>
                             </div>
                         </div>
 
@@ -80,7 +83,7 @@ export const TrustSection = () => {
                                 <div className="w-3 h-3 bg-secondary rounded-full relative z-10 border-2 border-slate-900" />
                             </div>
                             <div className="mt-2 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                <span className="text-xs font-bold text-white">Maadi</span>
+                                <span className="text-xs font-bold text-white">{t('trust.locations.maadi')}</span>
                             </div>
                         </div>
 
@@ -91,7 +94,7 @@ export const TrustSection = () => {
                                 <div className="w-3 h-3 bg-secondary rounded-full relative z-10 border-2 border-slate-900" />
                             </div>
                             <div className="mt-2 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                <span className="text-xs font-bold text-white">Sheikh Zayed</span>
+                                <span className="text-xs font-bold text-white">{t('trust.locations.zayed')}</span>
                             </div>
                         </div>
 
@@ -102,7 +105,7 @@ export const TrustSection = () => {
                                 <div className="w-3 h-3 bg-secondary rounded-full relative z-10 border-2 border-slate-900" />
                             </div>
                             <div className="mt-2 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                <span className="text-xs font-bold text-white">6th October</span>
+                                <span className="text-xs font-bold text-white">{t('trust.locations.october')}</span>
                             </div>
                         </div>
 
@@ -110,7 +113,7 @@ export const TrustSection = () => {
                         <div className="absolute top-[45%] left-[45%] flex flex-col items-center group cursor-pointer">
                             <div className="w-2 h-2 bg-slate-600 rounded-full border border-slate-800" />
                             <div className="mt-2 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-xs text-slate-400">Downtown</span>
+                                <span className="text-xs text-slate-400">{t('trust.locations.downtown')}</span>
                             </div>
                         </div>
 

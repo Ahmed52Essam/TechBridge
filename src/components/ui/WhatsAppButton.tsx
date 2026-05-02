@@ -2,13 +2,13 @@ import { MessageCircle } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const WhatsAppButton = () => {
+    const { t } = useTranslation();
     const [isHovered, setIsHovered] = useState(false);
 
-    const whatsappMessage = encodeURIComponent(
-        "Hi! I'm interested in reducing my company's hardware costs with TechBridge. Can you help me switch from CapEx to OpEx?"
-    );
+    const whatsappMessage = encodeURIComponent(t('whatsapp.message'));
 
     return (
         <a
@@ -44,8 +44,8 @@ export const WhatsAppButton = () => {
                             exit={{ opacity: 0, width: 0 }}
                             className="overflow-hidden whitespace-nowrap pr-5"
                         >
-                            <span className="font-semibold text-sm">Chat with an Expert</span>
-                            <span className="ml-2 inline-block w-2 H-2 rounded-full bg-white animate-pulse" />
+                            <span className="font-semibold text-sm">{t('whatsapp.button')}</span>
+                            <span className="ml-2 inline-block w-2 h-2 rounded-full bg-white animate-pulse" />
                         </motion.div>
                     )}
                 </AnimatePresence>

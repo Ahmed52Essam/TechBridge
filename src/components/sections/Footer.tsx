@@ -1,13 +1,17 @@
 import { Linkedin, MessageSquare, Mail, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
             <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-center md:text-left">
+                    <div className="text-center md:text-start">
                         <h3 className="text-xl font-bold text-white mb-2">TechBridge</h3>
-                        <p className="text-sm">Proudly serving the Egyptian Business Community.</p>
+                        <p className="text-sm">{t('footer.tagline')}</p>
                         <div className="flex flex-col gap-1 mt-3">
                             <a href="mailto:info@techbridge-eg.com" className="text-sm hover:text-white transition-colors flex items-center gap-2 justify-center md:justify-start">
                                 <Mail className="h-3.5 w-3.5" />
@@ -21,8 +25,8 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
+                        <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
                     </div>
 
                     <div className="flex gap-4">
@@ -41,7 +45,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 text-center text-xs text-slate-600">
-                    &copy; {new Date().getFullYear()} TechBridge Egypt. All rights reserved.
+                    &copy; {new Date().getFullYear()} {t('footer.copyright')}
                 </div>
             </div>
         </footer>
