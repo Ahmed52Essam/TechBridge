@@ -72,8 +72,8 @@ The platform includes dedicated localized pages for:
 
 For inquiries or custom hardware proposals:
 - **Email**: [info@techbridge-eg.com](mailto:info@techbridge-eg.com)
-- **Phone**: +20 100 807 8769
-- **WhatsApp**: [Chat with an Expert](https://wa.me/201008078769)
+- **Phone**: +20 102 469 2216
+- **WhatsApp**: [Chat with an Expert](https://wa.me/201024692216)
 
 ---
 *Private - All rights reserved © TechBridge Egypt*
