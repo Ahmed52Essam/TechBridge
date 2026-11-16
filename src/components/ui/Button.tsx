@@ -13,8 +13,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "default", size = "default", isLoading, leftIcon, rightIcon, children, disabled, ...props }, ref) => {
         const variants = {
-            default: "bg-primary text-white hover:bg-primary/90 shadow-glow",
-            secondary: "bg-secondary text-white hover:bg-secondary/90 shadow-md",
+            default: "bg-primary text-white hover:bg-dark",
+            secondary: "bg-secondary text-white hover:bg-dark",
             outline: "border-2 border-slate-200 bg-transparent hover:bg-slate-50 hover:border-slate-300 text-slate-700",
             ghost: "hover:bg-slate-100 text-slate-700",
             link: "text-primary underline-offset-4 hover:underline px-0 py-0 h-auto",
@@ -30,7 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         return (
             <button
                 className={cn(
-                    "inline-flex items-center justify-center rounded-full text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
+                    "inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
                     variants[variant],
                     sizes[size],
                     className

@@ -4,156 +4,131 @@
     "hardware": "Hardware",
     "howItWorks": "How It Works",
     "faq": "FAQ",
-    "getStarted": "Get Started"
+    "getStarted": "Request a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "label": "Main navigation",
+    "skip": "Skip to content"
   },
   "hero": {
-    "badge": "Hardware as a Service",
-    "titleMain": "Stop Buying Hardware.",
-    "titleSub": "Start Subscribing to Productivity.",
-    "description": "Equip your company with the latest laptops and workstations for a fixed monthly fee. No upfront capital. 4-hour replacement guarantee in Cairo.",
-    "viewPricing": "View Pricing",
-    "howItWorks": "See How It Works",
-    "floatingCard1": "0 EGP Upfront",
-    "floatingCard2": "Grade A Hardware",
-    "floatingCard2Label": "Quality",
-    "brandLabel": "Hardware Options"
+    "badge": "Hardware subscriptions for businesses in Egypt",
+    "titleMain": "Equip your team.",
+    "titleSub": "Pay monthly.",
+    "description": "Business laptops, desktops and workstations on a monthly subscription. Choose the equipment your team needs, with maintenance and replacement support.",
+    "requestQuote": "Request a quote",
+    "exploreHardware": "Explore hardware",
+    "serviceTitle": "24-hour replacement",
+    "serviceDescription": "Replacement support for technical failures across Greater Cairo.",
+    "serviceHours": "Support hours: Sunday–Thursday, 9 AM–6 PM. Service conditions apply.",
+    "serviceTerms": "Read the service terms",
+    "brandLabel": "Hardware options from"
   },
   "comparison": {
-    "title": "Buying vs. TechBridge",
-    "subtitle": "See why modern businesses are switching from CAPEX to OPEX models.",
+    "title": "Buying equipment or subscribing?",
+    "subtitle": "Compare the upfront commitment and ongoing responsibilities.",
     "headerLabel": "Comparison",
     "headerBuy": "Traditional Buying",
     "headerRent": "TechBridge Model",
     "rows": {
       "upfront": {
-        "label": "Upfront Capital",
-        "buy": "High Cost",
-        "rent": "Zero"
-      },
-      "tax": {
-        "label": "Tax Deductible",
-        "buy": "Depreciating Asset",
-        "rent": "100% (OpEx)"
+        "label": "Upfront hardware purchase",
+        "buy": "Purchase equipment",
+        "rent": "No hardware purchase; monthly fees apply"
       },
       "repairs": {
-        "label": "Repairs & Maintenance",
-        "buy": "Slow & Costly",
-        "rent": "Instant Swaps (24hr)"
+        "label": "Maintenance and replacement",
+        "buy": "Arrange repairs separately",
+        "rent": "Maintenance and 24-hour replacement support"
       },
       "upgrades": {
-        "label": "Hardware Upgrades",
-        "buy": "Every 3-5 Years",
-        "rent": "Every 24 Months"
+        "label": "Equipment upgrades",
+        "buy": "Purchase replacement equipment",
+        "rent": "Discuss upgrades under your agreement"
       },
       "scalability": {
-        "label": "Scalability",
-        "buy": "Stuck with Inventory",
-        "rent": "Scale Up/Down Anytime"
+        "label": "Changing team needs",
+        "buy": "Manage your own inventory",
+        "rent": "Agree equipment changes with TechBridge"
       }
     }
   },
   "features": {
-    "badge": "Why TechBridge?",
-    "title": "Built for Modern Teams",
-    "modernTeams": "Modern Teams",
-    "zeroUpfront": {
-      "title": "Zero Upfront Capital",
-      "description": "Stop draining your cash flow on depreciating assets. Switch to OpEx and keep your capital for growth, marketing, and hiring."
-    },
-    "simulation": {
-      "title": "First Year Cash Flow",
-      "subtitle": "10 Enterprise Laptops",
-      "buyLabel": "Buying",
-      "buySub": "10 Workstations",
-      "rentLabel": "TechBridge",
-      "rentSub": "Subscription",
-      "negativeImpact": "-500k EGP",
-      "zeroUpfront": "0 EGP ✨",
-      "caption": "Simulation based on market average for 10 Enterprise Laptops."
-    },
-    "tax": {
-      "title": "100% Tax Deductible",
-      "description": "Leasing utilizes OpEx instead of CapEx, making every invoice 100% tax deductible."
-    },
-    "protection": {
-      "title": "Complete Protection",
-      "description": "Accidental damage protection included. You break it, we fix it or replace it.",
-      "theft": "Theft",
-      "liquid": "Liquid"
-    },
-    "delivery": {
-      "title": "Same-Day Delivery",
-      "description": "Order before noon, get your devices delivered the same day across Greater Cairo.",
-      "status": "Express Bridge Active"
-    },
-    "upgrades": {
-      "title": "Instant Upgrades",
-      "description": "Need more power? Upgrade to the latest models anytime without buying new hardware.",
-      "label": "Upgrade Availability",
-      "availability": "24/7"
-    }
+    "title": "What your subscription covers",
+    "description": "The equipment and service details are set out in your proposal.",
+    "items": [
+      {
+        "title": "Monthly hardware subscription",
+        "description": "Use the equipment without an upfront hardware purchase. Monthly subscription fees apply."
+      },
+      {
+        "title": "Maintenance and replacement",
+        "description": "Technical support and 24-hour replacement for technical failures in Greater Cairo, under the service terms."
+      },
+      {
+        "title": "Damage protection",
+        "description": "Accidental damage protection, with coverage and exclusions specified in your agreement."
+      },
+      {
+        "title": "Equipment changes",
+        "description": "Discuss upgrades or changes as your team grows. Specifications, timing and fees are confirmed in your proposal."
+      }
+    ]
   },
   "catalog": {
-    "title": "Our Hardware",
-    "highlightedWord": "Bridge",
-    "subtitle": "Premium devices tailored to your workflow. Contact us for a custom quote.",
-    "popular": "MOST POPULAR",
+    "title": "Hardware for the way you work",
+    "subtitle": "Start with your team's workload. We will confirm the exact models, specifications and monthly fee in your proposal.",
     "differentConfig": "Need a different configuration?",
-    "talkToTeam": "Talk to our team",
+    "talkToTeam": "Tell us what you need",
     "items": {
       "laptops": {
-        "title": "Enterprise Laptops",
-        "description": "High-performance units for mobile professionals and management.",
+        "title": "Business laptops",
+        "description": "For mobile work, office applications and everyday business tasks.",
         "specs": [
           "Intel Core i5/i7",
           "Lightweight Chassis",
           "Long Battery Life"
         ],
-        "buttonText": "Request Quote"
+        "buttonText": "Request a quote"
       },
       "pcs": {
-        "title": "Custom PC Builds",
-        "description": "Tailored desktop configurations for admin, operations, or specific office needs.",
+        "title": "Office desktops",
+        "description": "For administration, operations and work at a fixed desk.",
         "specs": [
           "Fully Customizable",
           "Upgradable Storage",
           "Cost Effective"
         ],
-        "buttonText": "Build Your Config"
+        "buttonText": "Request a configuration"
       },
       "workstations": {
-        "title": "High-Power Workstations",
-        "description": "Extreme performance for rendering, development, and graphic design.",
+        "title": "Workstations",
+        "description": "For development, design, rendering and graphics-intensive workloads.",
         "specs": [
           "Xeon or i9 Processors",
           "RTX Graphics",
           "32GB+ RAM"
         ],
-        "buttonText": "Contact Sales"
+        "buttonText": "Request a quote"
       }
-    }
+    },
+    "note": "Specifications below describe available configurations, not a live stock list."
   },
   "trust": {
-    "badge": "Active Zones",
-    "title": "Cairo’s Fastest Tech Implementation.",
-    "techImplementation": "Tech Implementation.",
-    "description": "We operate a decentralized TechBridge of technicians across Greater Cairo. This allows us to guarantee 4-hour replacement times for our premium subscribers.",
-    "stats": {
-      "startups": "Active Startups",
-      "response": "Avg. Response",
-      "uptime": "Uptime"
-    },
+    "title": "Service across Greater Cairo",
+    "description": "We support businesses in these areas. Confirm your delivery address and service coverage when requesting a proposal.",
     "locations": {
       "newCairo": "New Cairo",
       "maadi": "Maadi",
       "zayed": "Sheikh Zayed",
       "october": "6th October",
       "downtown": "Downtown"
-    }
+    },
+    "conditions": "For technical failures, replacement is provided within 24 hours under the service terms. Support hours are Sunday–Thursday, 9 AM–6 PM.",
+    "terms": "Service terms"
   },
   "contact": {
-    "title": "Upgrade Your Office Today.",
-    "subtitle": "Get a custom proposal within 24 hours. No commitment required. Let us handle the hardware so you can focus on growth.",
+    "title": "Tell us what your team needs",
+    "subtitle": "Share your requirements and receive a custom hardware proposal within 24 hours. No commitment required.",
     "cardTitle": "Request Proposal",
     "cardDescription": "Tell us what you need. We'll build a plan for you.",
     "form": {
@@ -167,9 +142,9 @@
       "phonePlaceholder": "+20 1xx xxx xxxx",
       "devicesLabel": "How many devices do you need?",
       "devicesOptions": {
-        "1-5": "1-5 Devices",
-        "5-20": "5-20 Devices",
-        "20+": "20+ Devices"
+        "1-5": "1–5 devices",
+        "6-20": "6–20 devices",
+        "21+": "21+ devices"
       },
       "submit": "Request Proposal",
       "autoResponse": "Thank you for your inquiry! We have received your request for a custom hardware proposal and our team will get back to you shortly."
@@ -182,15 +157,15 @@
     "copyright": "TechBridge Egypt. All rights reserved."
   },
   "whatsapp": {
-    "button": "Chat with an Expert",
-    "message": "Hi! I'm interested in reducing my company's hardware costs with TechBridge. Can you help me switch from CapEx to OpEx?"
+    "button": "Chat on WhatsApp",
+    "message": "Hi! I'd like a hardware subscription proposal for my team."
   },
   "seo": {
     "title": "Tech Bridge Egypt - Hardware as a Service"
   },
   "terms": {
     "title": "Terms of Service",
-    "lastUpdated": "Last Updated: May 2026",
+    "lastUpdated": "Last updated: November 2026",
     "introduction": "Welcome to TechBridge. By using our website and services, you agree to comply with and be bound by the following terms and conditions.",
     "sections": [
       {
@@ -199,7 +174,7 @@
       },
       {
         "title": "2. Hardware Responsibility",
-        "content": "Subscribers are responsible for the basic care of the hardware. While we provide a 4-hour replacement guarantee for technical failures, intentional damage or gross negligence may result in repair fees."
+        "content": "Subscribers are responsible for the basic care of the hardware. While we provide a 24-hour replacement guarantee for technical failures, intentional damage or gross negligence may result in repair fees."
       },
       {
         "title": "3. Payment & Billing",
@@ -207,7 +182,7 @@
       },
       {
         "title": "4. Service Guarantee",
-        "content": "Our 4-hour replacement guarantee applies to Greater Cairo during business hours (9 AM - 6 PM, Sunday to Thursday). Outside these hours, replacements will be prioritized for the next business day."
+        "content": "Our 24-hour replacement guarantee for technical failures applies to Greater Cairo under the service agreement. Support hours are 9 AM–6 PM, Sunday to Thursday. Requests outside these hours are prioritized on the next business day."
       }
     ]
   },
@@ -231,6 +206,28 @@
       {
         "title": "4. Cookies",
         "content": "Our website uses cookies to enhance your browsing experience and analyze site traffic."
+      }
+    ]
+  },
+  "process": {
+    "title": "From requirements to working equipment",
+    "description": "Choose the right setup before committing to a subscription.",
+    "steps": [
+      {
+        "title": "Tell us what your team needs",
+        "description": "Share your device count, workloads and any configuration requirements."
+      },
+      {
+        "title": "Review your proposal",
+        "description": "Check the equipment specifications, monthly fee and service terms."
+      },
+      {
+        "title": "Arrange delivery",
+        "description": "Once the proposal is approved, agree on delivery and setup requirements."
+      },
+      {
+        "title": "Keep your team working",
+        "description": "Contact us for maintenance, replacement support or changes to your equipment."
       }
     ]
   }

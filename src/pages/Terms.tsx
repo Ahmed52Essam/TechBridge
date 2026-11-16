@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+
 
 const Terms = () => {
     const { t } = useTranslation();
@@ -10,14 +10,12 @@ const Terms = () => {
     }, []);
 
     return (
-        <div className="pt-40 pb-24 min-h-screen bg-slate-50">
+        <div className="py-12 md:py-16 min-h-screen bg-background">
             <div className="container px-4 mx-auto max-w-4xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-200"
+                <div
+                    className="text-start"
                 >
-                    <h1 className="text-4xl font-display font-bold text-slate-900 mb-2">
+                    <h1 className="text-4xl font-display font-bold text-dark mb-2">
                         {t('terms.title')}
                     </h1>
                     <p className="text-slate-500 mb-8 font-medium">
@@ -31,7 +29,7 @@ const Terms = () => {
 
                         <div className="space-y-12">
                             {Array.isArray(t('terms.sections', { returnObjects: true })) ? 
-                             (t('terms.sections', { returnObjects: true }) as any[]).map((section: any, index: number) => (
+                             (t('terms.sections', { returnObjects: true }) as { title: string; content: string }[]).map((section, index: number) => (
                                 <section key={index} className="space-y-4">
                                     <h2 className="text-2xl font-bold text-slate-900">
                                         {section.title}
@@ -45,7 +43,7 @@ const Terms = () => {
                             )}
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );

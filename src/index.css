@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,25 +6,20 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-dark bg-background bg-mesh-light bg-fixed bg-no-repeat bg-cover min-h-screen selection:bg-primary/20 selection:text-primary;
+    @apply font-sans antialiased text-dark bg-background min-h-screen selection:bg-primary/20 selection:text-dark;
   }
 
-  /* Smooth scrolling for anchor links */
   html {
     scroll-behavior: smooth;
-  }
-}
-
-@layer utilities {
-  .glass {
-    @apply bg-surface backdrop-blur-md border border-white/20 shadow-glass;
+    scroll-padding-top: 92px;
   }
 
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-sm hover:shadow-glow hover:border-primary/30 transition-all duration-300;
+  :focus-visible {
+    @apply outline outline-2 outline-offset-4 outline-primary;
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   }
 }
