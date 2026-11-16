@@ -1,91 +1,31 @@
-import { motion, type HTMLMotionProps } from 'framer-motion';
+import type { ComponentPropsWithoutRef } from 'react';
 import { cn } from '../../lib/utils';
-import { type NavSection } from '../../lib/navigation';
-import type { ReactNode } from 'react';
+import type { NavSection } from '../../lib/navigation';
 
-/**
- * Section Module
- * 
- * Provides a 'Deep Interface' for page sections. 
- * Handles layout standards, background themes, and entrance animations.
- */
-
-interface SectionProps extends Omit<HTMLMotionProps<'section'>, 'children'> {
-    children: ReactNode;
-    section?: NavSection; // Optional link to Navigation Registry
-    variant?: 'default' | 'alt' | 'dark' | 'glass' | 'none';
+interface SectionProps extends ComponentPropsWithoutRef<'section'> {
+    section?: NavSection;
+    variant?: 'default' | 'alt' | 'dark' | 'none';
     containerSize?: 'default' | 'narrow' | 'wide' | 'none';
-    withAnimation?: boolean;
 }
 
 export const Section = ({
-    children,
-    section,
-    variant = 'default',
-    containerSize = 'default',
-    withAnimation = true,
-    className,
-    id,
-    ...props
+    children, section, variant = 'default', containerSize = 'default', className, id, ...props
 }: SectionProps) => {
-    
     const variants = {
         default: 'bg-white',
-        alt: 'bg-slate-50/50',
-        dark: 'bg-slate-900 text-white',
-        glass: 'bg-gradient-to-b from-white to-slate-50/50 relative overflow-hidden',
+        alt: 'bg-background',
+        dark: 'bg-dark text-white',
         none: '',
     };
-
     const containers = {
-        default: 'container px-4 md:px-6 mx-auto',
+        default: 'container px-4 md:px-6 mx-auto max-w-6xl',
         narrow: 'container px-4 md:px-6 mx-auto max-w-4xl',
-        wide: 'container px-4 md:px-6 mx-auto max-w-7xl',
+        wide: 'container px-4 md:px-6 mx-auto max-w-6xl',
         none: '',
     };
-
-    const sectionId = section?.id || id;
-
-    const content = (
-        <div className={cn(containers[containerSize])}>
-            {children as any}
-        </div>
-    );
-
-    if (!withAnimation) {
-        // Strip motion props when rendering a regular section
-        const { 
-            whileInView, 
-            initial, 
-            viewport, 
-            transition, 
-            onViewportEnter, 
-            onViewportLeave,
-            ...safeProps 
-        } = props as any;
-
-        return (
-            <section 
-                id={sectionId} 
-                className={cn('py-24', variants[variant], className)}
-                {...safeProps}
-            >
-                {content}
-            </section>
-        );
-    }
-
     return (
-        <motion.section
-            id={sectionId}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className={cn('py-24', variants[variant], className)}
-            {...props}
-        >
-            {content}
-        </motion.section>
+        <section id={section?.id || id} className={cn('py-12 md:py-16', variants[variant], className)} {...props}>
+            <div className={containers[containerSize]}>{children}</div>
+        </section>
     );
 };

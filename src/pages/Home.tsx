@@ -7,32 +7,15 @@ import { Contact } from '../components/sections/Contact';
 import { SITE_SECTIONS } from '../lib/navigation';
 import { Section } from '../components/ui/Section';
 
-const Home = () => {
-  return (
+const Home = () => (
     <>
-      <Hero />
-      
-      <Section section={SITE_SECTIONS.BENEFITS}>
-        <Comparison />
-      </Section>
-
-      <Section section={SITE_SECTIONS.HARDWARE} variant="glass">
-        <Catalog />
-      </Section>
-
-      <Section section={SITE_SECTIONS.HOW_IT_WORKS} variant="alt" containerSize="wide">
-        <Features />
-      </Section>
-
-      <Section variant="dark">
-        <TrustSection />
-      </Section>
-
-      <Section section={SITE_SECTIONS.CONTACT} variant="dark">
-        <Contact />
-      </Section>
+        <Hero />
+        <Section section={SITE_SECTIONS.HARDWARE}><Catalog /></Section>
+        <Section section={SITE_SECTIONS.HOW_IT_WORKS} variant="alt"><Features /></Section>
+        <Section section={SITE_SECTIONS.BENEFITS}><Comparison /></Section>
+        <Section variant="dark"><TrustSection /></Section>
+        <Section section={SITE_SECTIONS.CONTACT} variant="dark" className="border-t border-white/15"><Contact /></Section>
     </>
-  );
-};
+);
 
 export default Home;

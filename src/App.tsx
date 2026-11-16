@@ -9,10 +9,10 @@ import Privacy from './pages/Privacy';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background font-sans text-slate-900 antialiased selection:bg-secondary/20 selection:text-secondary">
+      <div className="min-h-screen bg-background font-sans text-dark antialiased selection:bg-secondary/20 selection:text-secondary">
         <Navbar />
 
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/terms" element={<Terms />} />
